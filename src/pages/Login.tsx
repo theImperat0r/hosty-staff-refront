@@ -22,7 +22,7 @@ const Login = () => {
     setLoading(true);
     try {
       await login(email, password);
-      navigate("/", { replace: true });
+      navigate("/staff", { replace: true });
     } catch (err: unknown) {
       toast.error((err instanceof Error ? err.message : String(err)) || "შესვლა ვერ მოხერხდა");
     } finally {

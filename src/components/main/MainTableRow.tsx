@@ -41,7 +41,17 @@ const MainTableRow = ({
               {requestTitle}
             </div>
             <div className="text-xs text-gray-500 mt-0.5">
-              {requestDescription}
+              {(() => {
+                try {
+                  const parsed = JSON.parse(requestDescription);
+                  if (Array.isArray(parsed)) {
+                    return `${parsed.length} item${parsed.length !== 1 ? "s" : ""}`;
+                  }
+                } catch {
+                  // not JSON, show as-is
+                }
+                return requestDescription;
+              })()}
             </div>
           </div>
         </div>

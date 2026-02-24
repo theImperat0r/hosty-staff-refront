@@ -7,13 +7,13 @@ const AsideFooter = () => {
 
   const handleLogout = () => {
     logout();
-    navigate("/login", { replace: true });
+    navigate("/staff/login", { replace: true });
   };
 
   return (
     <div className="p-4 mt-auto border-t border-gray-200">
       <Link
-        to={"/settings"}
+        to={"/staff/settings"}
         className="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group text-gray-500 hover:bg-gray-50"
       >
         <svg

@@ -20,10 +20,10 @@ import ProtectedRoute from "./components/ProtectedRoute.tsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/login" element={<Login />} />
-      <Route path="/registration" element={<Registration />} />
+      <Route path="/staff/login" element={<Login />} />
+      <Route path="/staff/registration" element={<Registration />} />
       <Route
-        path="/"
+        path="/staff"
         element={
           <ProtectedRoute>
             <App />
@@ -31,9 +31,9 @@ const router = createBrowserRouter(
         }
       >
         <Route index element={<Home />} />
-        <Route path="/my-tasks" element={<MyTasks />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/team" element={<Team />} />
+        <Route path="/staff/my-tasks" element={<MyTasks />} />
+        <Route path="/staff/settings" element={<Settings />} />
+        <Route path="/staff/team" element={<Team />} />
       </Route>
     </>,
   ),

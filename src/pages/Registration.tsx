@@ -82,7 +82,7 @@ const Registration = () => {
         inviteToken: inviteToken || undefined,
       });
       toast.success("რეგისტრაცია წარმატებულია!");
-      navigate("/", { replace: true });
+      navigate("/staff", { replace: true });
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       toast.error(err.message || "რეგისტრაცია ვერ მოხერხდა");

@@ -5,10 +5,11 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: "/staff/",
   server: {
     proxy: {
       "/api": {
-        target: "https://hosty-staff-back-production.up.railway.app/",
+        target: "https://hosty-server.up.railway.app",
         changeOrigin: true,
       },
     },

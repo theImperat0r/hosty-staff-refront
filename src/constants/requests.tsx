@@ -23,7 +23,6 @@ export const DASHBOARD_REQUESTS = [
         <path d="M8 16h.01"></path>
       </svg>
     ),
-    quantity: 2,
   },
   {
     id: 2,
@@ -45,7 +44,6 @@ export const DASHBOARD_REQUESTS = [
         <polyline points="12 6 12 12 16 14"></polyline>
       </svg>
     ),
-    quantity: 2,
   },
   {
     id: 3,
@@ -67,7 +65,6 @@ export const DASHBOARD_REQUESTS = [
         <path d="m9 11 3 3L22 4"></path>
       </svg>
     ),
-    quantity: 1,
   },
   {
     id: 4,
@@ -90,7 +87,6 @@ export const DASHBOARD_REQUESTS = [
         <path d="M12 17h.01"></path>
       </svg>
     ),
-    quantity: 2,
   },
 ];
 
@@ -115,7 +111,6 @@ export const MY_TASKS_REQUESTS = [
         <polyline points="12 6 12 12 16 14"></polyline>
       </svg>
     ),
-    quantity: 2,
   },
   {
     id: 2,
@@ -138,7 +133,6 @@ export const MY_TASKS_REQUESTS = [
         <circle cx="12" cy="14" r="8"></circle>
       </svg>
     ),
-    quantity: 2,
   },
   {
     id: 3,
@@ -160,7 +154,6 @@ export const MY_TASKS_REQUESTS = [
         <path d="m9 11 3 3L22 4"></path>
       </svg>
     ),
-    quantity: 2,
   },
   {
     id: 5,
@@ -186,6 +179,5 @@ export const MY_TASKS_REQUESTS = [
         <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
       </svg>
     ),
-    quantity: "14m",
   },
 ];

@@ -19,7 +19,7 @@ const AsideNav = () => {
   return (
     <nav className="flex-1 px-4 space-y-1 overflow-y-auto">
       <NavLink
-        to={"/"}
+        to={"/staff"}
         className={({ isActive }) =>
           `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`
         }
@@ -44,7 +44,7 @@ const AsideNav = () => {
         <span className="text-sm font-medium">Dashboard</span>
       </NavLink>
       <NavLink
-        to={"/my-tasks"}
+        to={"/staff/my-tasks"}
         className={({ isActive }) =>
           `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`
         }
@@ -76,7 +76,7 @@ const AsideNav = () => {
         )}
       </NavLink>
       <NavLink
-        to={"/team"}
+        to={"/staff/team"}
         className={({ isActive }) =>
           `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`
         }
