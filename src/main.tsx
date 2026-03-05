@@ -16,7 +16,7 @@ import Team from "./pages/Team.tsx";
 import Login from "./pages/Login.tsx";
 import Registration from "./pages/Registration.tsx";
 import { AuthProvider } from "./context/AuthContext.tsx";
-// import ProtectedRoute from "./components/ProtectedRoute.tsx";
+import ProtectedRoute from "./components/ProtectedRoute.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,12 +25,11 @@ const router = createBrowserRouter(
       <Route path="/staff/registration" element={<Registration />} />
       <Route
         path="/staff"
-        // element={
-        //   <ProtectedRoute>
-        //     <App />
-        //   </ProtectedRoute>
-        // }
-        element={<App />}
+        element={
+          <ProtectedRoute>
+            <App />
+          </ProtectedRoute>
+        }
       >
         <Route index element={<Home />} />
         <Route path="/staff/my-tasks" element={<MyTasks />} />
