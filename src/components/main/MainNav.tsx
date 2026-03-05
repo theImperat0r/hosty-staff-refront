@@ -4,6 +4,7 @@ import { api } from "../../lib/api";
 import LanguageSwitcher from "../LanguageSwitcher";
 import SearchIcon from "../../assets/SearchIcon";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 type SearchResult = {
   requests: { id: string; title: string; room: { number: string } }[];
@@ -98,23 +99,24 @@ const MainNav = () => {
         <LanguageSwitcher />
 
         <div className="h-8 w-px bg-gray-200"></div>
-
-        <div className="flex items-center gap-3">
-          <div className="h-9 w-9 rounded-full bg-[#c5a667]/10 flex items-center justify-center">
-            <span className="text-sm font-semibold text-[#c5a667]">
-              {user?.name?.[0] || "U"}
-              {user?.lastName?.[0] || ""}
-            </span>
+        <Link to={"settings"}>
+          <div className="flex items-center gap-3">
+            <div className="h-9 w-9 rounded-full bg-[#c5a667]/10 flex items-center justify-center">
+              <span className="text-sm font-semibold text-[#c5a667]">
+                {user?.name?.[0] || "U"}
+                {user?.lastName?.[0] || ""}
+              </span>
+            </div>
+            <div className="hidden sm:block">
+              <p className="text-sm font-medium text-gray-900">
+                {user?.name || ""} {user?.lastName || ""}
+              </p>
+              <p className="text-xs text-gray-500">
+                {user?.position === "SUPERVISOR" ? "სუპერვაიზერი" : "პერსონალი"}
+              </p>
+            </div>
           </div>
-          <div className="hidden sm:block">
-            <p className="text-sm font-medium text-gray-900">
-              {user?.name || ""} {user?.lastName || ""}
-            </p>
-            <p className="text-xs text-gray-500">
-              {user?.position === "SUPERVISOR" ? "სუპერვაიზერი" : "პერსონალი"}
-            </p>
-          </div>
-        </div>
+        </Link>
       </div>
     </nav>
   );
