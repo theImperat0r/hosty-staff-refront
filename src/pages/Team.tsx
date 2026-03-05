@@ -4,6 +4,7 @@ import MainTitle from "../components/main/MainTitle";
 import { api } from "../lib/api";
 import { useAuth } from "../context/AuthContext";
 import { DAY_NAMES } from "../lib/utils";
+import { useTranslation } from "react-i18next";
 
 type TeamMember = {
   id: string;
@@ -22,6 +23,7 @@ type TeamMember = {
 const Team = () => {
   const { user } = useAuth();
   const [members, setMembers] = useState<TeamMember[]>([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     api
@@ -33,10 +35,12 @@ const Team = () => {
   return (
     <div className="max-w-7xl mx-auto flex flex-col gap-8">
       <MainTitle
-        department={user?.department?.name || "Housekeeping Department"}
-        page={"გუნდი"}
-        title={"ჩემი გუნდი"}
-        description={"თქვენი დეპარტამენტის თანამშრომლები"}
+        department={
+          user?.department?.name || "Team" + " " + t("common.department")
+        }
+        page={t("team.team")}
+        title={t("team.title")}
+        description={t("team.description")}
       />
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
         {members.map((tm) => (

@@ -7,166 +7,97 @@
     "signOut": "Sign Out"
   },
   "dashboard": {
-    "welcome": "Hello",
-    "subTitle": "Here's what's happening at Episode Hotel today.",
-    "highOccupancy": "High occupancy",
-    "mediumOccupancy": "Medium occupancy",
-    "lowOccupancy": "Low occupancy",
-    "recentRequests": "Recent Requests",
-    "staffOnShift": "Staff On Shift",
-    "topPerformers": "Top Performers",
-    "totalRequests": "Total Requests",
-    "openRequests": "Open Requests",
-    "inProgress": "In Progress",
-    "satisfaction": "Satisfaction",
-    "actionNeeded": "Action needed",
-    "stable": "Stable",
-    "guestRoom": "Guest / Room",
-    "request": "Request",
-    "time": "time",
-    "status": "Status",
-    "action": "Action",
-    "new": "New",
-    "review": "Review",
-    "completed": "Completed"
+    "requests": "Requests",
+    "title": "My Department",
+    "description": "Only department requests"
   },
-  "staff": {
-    "title": "Staff Management",
-    "subTitle": "Manage staff, invite new members, assign shifts",
-    "invitation": "Invite Staff",
-    "activeStaff": "Active Staff",
-    "onShift": "On Shift",
-    "offShift": "Off shift",
-    "pending": "Pending Invites",
-    "search": "Search by name, email, or department...",
-    "fullName": "Full Name",
-    "department": "department",
-    "shift": "shift",
-    "shiftStatus": "shift Status",
-    "accountStatus": "account Status",
-    "morning": "Morning",
-    "night": "Night",
-    "notAssigned": "Not Assigned",
-    "active": "Active",
-    "disabled": "Disabled",
-    "invited": "Invited"
+  "myTasks": {
+    "myTasks": "My Tasks",
+    "title": "My Tasks",
+    "description": "All tasks assigned to me"
   },
-  "departments": {
-    "title": "Departments",
-    "subTitle": "Create, edit, and manage hotel departments",
-    "newDepartment": "New Department",
-    "staff": "Staff",
-    "active": "Active",
-    "archived": "Archived"
-  },
-  "shifts": {
-    "title": "Shift Management",
-    "subTitle": "Create shifts and assign staff members",
-    "newShift": "Create Shift",
-    "everyDay": "Every day",
-    "weekdays": "Weekdays",
-    "assignedStaff": "Assigned staff",
-    "members": "Members",
-    "manageStaff": "Manage Staff"
-  },
-  "requests": {
-    "title": "Request Management",
-    "subTitle": "Manage guest requests efficiently.",
-    "export": "Export",
-    "newRequest": "New Request",
-    "filters": "Filters",
-    "category": "Category",
-    "status": "Status",
-    "department": "Department",
-    "shift": "Shift",
-    "staff": "Staff",
-    "room": "Room",
-    "all": "All"
-  },
-  "analytics": {
-    "title": "Analytics",
-    "subTitle": "Operational performance metrics and insights.",
-    "totalRequests": "Total Requests",
-    "completed": "Completed",
-    "active": "Active",
-    "avgTime": "Avg. Time",
-    "mostLoaded": "Most Loaded",
-    "peakHour": "Peak Hour",
-    "requestsOverTime": "Requests Over Time",
-    "today": "Today",
-    "last7Days": "Last 7 Days",
-    "last30Days": "Last 30 Days",
-    "custom": "Custom",
-    "departmentPerformance": "Department Performance"
-  },
-  "integration": {
-    "title": "Mews Integration Status",
-    "subTitle": "Monitor Mews PMS connection, sync activity, and errors.",
-    "triggerManualSync": "Trigger Manual Sync",
-    "connection": "Connection",
-    "environment": "Environment",
-    "lastSync": "Last Sync",
-    "apiHealth": "API Health",
-    "connected": "Connected",
-    "production": "Production",
-    "ok": "OK",
-    "syncActivity": "Sync Activity",
-    "guestData": "Guest Data",
-    "reservations": "Reservations",
-    "roomStatus": "Room Status",
-    "recentErrors": "Recent Errors",
-    "last": "Last",
-    "date": "Date",
-    "errorType": "Error Type",
-    "description": "Description"
+  "team": {
+    "team": "Team",
+    "title": "My Team",
+    "description": "Your department colleagues"
   },
   "settings": {
-    "title": "Settings",
-    "subTitle": "Manage hotel services, information, and restaurant menu.",
-    "services": "Services",
-    "servicesSub": "Enable or disable guest-facing services",
-    "hotelInformation": "Hotel Information",
-    "hotelInformationSub": "Update WiFi credentials, contact info, and more",
-    "WiFiNetworkName": "WiFi Network Name",
-    "WiFiPassword": "WiFi Password",
-    "FrontDeskPhone": "Front Desk Phone",
-    "EmergencyPhone": "Emergency Phone",
-    "Check-inTime": "Check-in Time",
-    "Check-outTime": "Check-out Time",
-    "HotelAddress": "Hotel Address",
-    "saveChanges": "Save changes",
-    "restaurantMenu": "Restaurant Menu",
-    "restaurantMenuSub": "Manage menu items and availability",
-    "addItem": "Add Item",
-    "itemName": "Item Name",
-    "category": "Category",
-    "price": "Price",
-    "status": "Status",
-    "actions": "Actions",
-    "starters": "Starters",
-    "mainCourse": "Main Course",
-    "desserts": "Desserts",
-    "drinks": "Drinks"
+    "breadcrumb": {
+      "notSpecified": "Not Specified",
+      "settings": "Settings"
+    },
+
+    "header": {
+      "title": "Profile & Settings",
+      "subtitle": "Manage your personal information"
+    },
+
+    "personalInfo": {
+      "title": "Personal Information",
+      "description": "Update your contact details",
+
+      "fields": {
+        "firstName": {
+          "label": "First Name"
+        },
+        "lastName": {
+          "label": "Last Name"
+        },
+        "phone": {
+          "label": "Phone Number"
+        }
+      },
+
+      "actions": {
+        "save": "Save"
+      }
+    },
+
+    "position": {
+      "title": "Position",
+      "description": "Your position in the organization",
+
+      "fields": {
+        "hotel": "Hotel",
+        "department": "Department",
+        "role": "Role"
+      }
+    },
+
+    "shifts": {
+      "title": "Assigned Shifts",
+      "description": "Your work schedule",
+
+      "emptyState": {
+        "title": "No shifts assigned yet"
+      }
+    },
+
+    "password": {
+      "title": "Change Password",
+      "description": "Change your password regularly for security",
+
+      "fields": {
+        "newPassword": {
+          "label": "New Password",
+          "placeholder": "Minimum 6 characters"
+        },
+        "confirmPassword": {
+          "label": "Confirm New Password",
+          "placeholder": "••••••••"
+        }
+      },
+
+      "actions": {
+        "changePassword": "Change Password"
+      }
+    }
   },
   "common": {
+    "search": "Search...",
+    "department": "Department",
     "loading": "Loading...",
-    "error": "Error",
-    "success": "Success",
-    "cancel": "Cancel",
-    "save": "Save",
-    "delete": "Delete",
-    "edit": "Edit",
-    "search": "Search",
-    "noResults": "No results found",
-    "viewAll": "View All",
-    "all": "All",
-    "fullList": "Full List",
-    "room": "Room",
-    "ago": "Ago",
-    "showing": "Showing",
-    "of": "of",
-    "available": "Available",
-    "unavailable": "Unavailable"
+    "notSpecified": "Not Specified"
   },
   "auth": {
     "login": "Login",

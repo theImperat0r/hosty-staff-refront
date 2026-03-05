@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { api } from "../../lib/api";
 import LanguageSwitcher from "../LanguageSwitcher";
+import SearchIcon from "../../assets/SearchIcon";
+import { useTranslation } from "react-i18next";
 
 type SearchResult = {
   requests: { id: string; title: string; room: { number: string } }[];
@@ -14,6 +16,7 @@ const MainNav = () => {
   const [searchResults, setSearchResults] = useState<SearchResult | null>(null);
   const [showSearch, setShowSearch] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -47,24 +50,10 @@ const MainNav = () => {
     <nav className="shrink-0 h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6">
       <div className="flex items-center gap-4">
         <div ref={searchRef} className="relative">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-search absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"
-          >
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.3-4.3"></path>
-          </svg>
+          <SearchIcon />
           <input
             className="h-9 w-64 rounded-lg border border-gray-200 bg-gray-50 pl-10 pr-4 text-sm placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5a667] focus-visible:ring-offset-2"
-            placeholder="Search requests, rooms..."
+            placeholder={t("common.search")}
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}

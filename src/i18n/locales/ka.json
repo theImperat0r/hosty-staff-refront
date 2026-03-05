@@ -7,166 +7,97 @@
     "signOut": "გასვლა"
   },
   "dashboard": {
-    "welcome": "გამარჯობა",
-    "subTitle": "აი რა ხდება Episode Hotel-ში დღეს.",
-    "highOccupancy": "მაღალი დატვირთვა",
-    "mediumOccupancy": "საშუალო დატვირთვა",
-    "lowOccupancy": "დაბალი დატვირთვა",
-    "recentRequests": "ბოლო მოთხოვნები",
-    "staffOnShift": "ცვლაზე მყოფი პერსონალი",
-    "topPerformers": "საუკეთესო თანამშრომლები",
-    "totalRequests": "სულ მოთხოვნები",
-    "openRequests": "ღია მოთხოვნები",
-    "inProgress": "მიმდინარე",
-    "satisfaction": "კმაყოფილება",
-    "actionNeeded": "მოითხოვს ყურადღებას",
-    "stable": "სტაბილური",
-    "guestRoom": "სტუმარი / ოთახი",
-    "request": "მოთხოვნა",
-    "time": "დრო",
-    "status": "სტატუსი",
-    "action": "მოქმედება",
-    "new": "ახალი",
-    "review": "განხილვა",
-    "completed": "დასრულებული"
+    "requests": "მოთხოვნები",
+    "title": "ჩემი დეპარტამენტი",
+    "description": "მხოლოდ დეპარტამენტის მოთხოვნები"
   },
-  "staff": {
-    "title": "პერსონალის მართვა",
-    "subTitle": "მართეთ პერსონალი, მოიწვიეთ ახალი წევრები, მიანიჭეთ ცვლები",
-    "invitation": "პერსონალის მოწვევა",
-    "activeStaff": "აქტიური პერსონალი",
-    "onShift": "ცვლაზე",
-    "offShift": "ცვლის გარეთ",
-    "pending": "მოლოდინში მოწვევები",
-    "search": "ძებნა სახელით, ემაილით ან დეპარტამენტით...",
-    "fullName": "სრული სახელი",
-    "department": "დეპარტამენტი",
-    "shift": "ცვლა",
-    "shiftStatus": "ცვლის სტატუსი",
-    "accountStatus": "ანგარიშის სტატუსი",
-    "morning": "დღე",
-    "night": "ღამე",
-    "notAssigned": "არ არის მინიჭებული",
-    "active": "აქტიური",
-    "disabled": "გაუქმებული",
-    "invited": "მოწვეული"
+  "myTasks": {
+    "myTasks": "ჩემი დავალებები",
+    "title": "ჩემი დავალებები",
+    "description": "ჩემთვის მინიჭებული ყველა დავალება"
   },
-  "departments": {
-    "title": "დეპარტამენტები",
-    "subTitle": "შექმენით, შეცვალეთ და მართეთ სასტუმროს დეპარტამენტები",
-    "newDepartment": "ახალი დეპარტამენტი",
-    "staff": "თანამშრომელი",
-    "active": "აქტიური",
-    "archived": "არქივი"
-  },
-  "shifts": {
-    "title": "ცვლების მართვა",
-    "subTitle": "შექმენით ცვლები და მიანიჭეთ პერსონალი",
-    "newShift": "ცვლის შექმნა",
-    "everyDay": "ყოველდღე",
-    "weekdays": "სამუშაო დღეები",
-    "assignedStaff": "მინიჭებული პერსონალი",
-    "members": "წევრი",
-    "manageStaff": "პერსონალის მართვა"
-  },
-  "requests": {
-    "title": "მოთხოვნების მართვა",
-    "subTitle": "მართეთ სტუმრების მოთხოვნები ეფექტურად.",
-    "export": "ექსპორტი",
-    "newRequest": "ახალი მოთხოვნა",
-    "filters": "ფილტრები",
-    "category": "კატეგორია",
-    "status": "სტატუსი",
-    "department": "დეპარტამენტი",
-    "shift": "ცვლა",
-    "staff": "პერსონალი",
-    "room": "ოთახი",
-    "all": "ყველა"
-  },
-  "analytics": {
-    "title": "ანალიტიკა",
-    "subTitle": "ოპერაციული შესრულების მეტრიკები და ანალიზი.",
-    "totalRequests": "სულ მოთხოვნები",
-    "completed": "დასრულებული",
-    "active": "აქტიური",
-    "avgTime": "საშ. დრო",
-    "mostLoaded": "ყველაზე დატვირთული",
-    "peakHour": "პიკის საათი",
-    "requestsOverTime": "მოთხოვნები დროის მიხედვით",
-    "today": "დღეს",
-    "last7Days": "ბოლო 7 დღე",
-    "last30Days": "ბოლო 30 დღე",
-    "custom": "სხვა",
-    "departmentPerformance": "დეპარტამენტის შესრულება"
-  },
-  "integration": {
-    "title": "Mews ინტეგრაციის სტატუსი",
-    "subTitle": "მონიტორინგი Mews PMS კავშირი, სინქრონიზაცია და შეცდომები.",
-    "triggerManualSync": "სინქრონიზაციის გაშვება",
-    "connection": "კავშირი",
-    "environment": "გარემო",
-    "lastSync": "ბოლო სინქრონიზაცია",
-    "apiHealth": "API ჯანმრთელობა",
-    "connected": "დაკავშირებულია",
-    "production": "პროდაქშენი",
-    "ok": "კარგი",
-    "syncActivity": "სინქრონიზაციის აქტივობა",
-    "guestData": "სტუმრის მონაცემები",
-    "reservations": "რეზერვაციები",
-    "roomStatus": "ოთახის სტატუსი",
-    "recentErrors": "ბოლო შეცდომები",
-    "last": "ბოლო",
-    "date": "თარიღი",
-    "errorType": "შეცდომის ტიპი",
-    "description": "აღწერა"
+  "team": {
+    "team": "გუნდი",
+    "title": "ჩემი გუნდი",
+    "description": "თქვენი დეპარტამენტის თანამშრომლები"
   },
   "settings": {
-    "title": "პარამეტრები",
-    "subTitle": "მართეთ სასტუმროს სერვისები, ინფორმაცია და რესტორნის მენიუ.",
-    "services": "სერვისები",
-    "servicesSub": "ჩართეთ ან გამორთეთ სტუმრებისთვის ხელმისაწვდომი სერვისები",
-    "hotelInformation": "სასტუმროს ინფორმაცია",
-    "hotelInformationSub": "განაახლეთ WiFi მონაცემები, საკონტაქტო ინფო და სხვა",
-    "WiFiNetworkName": "WiFi ქსელის სახელი",
-    "WiFiPassword": "WiFi პაროლი",
-    "FrontDeskPhone": "რეცეფციის ტელეფონი",
-    "EmergencyPhone": "საგანგებო ტელეფონი",
-    "Check-inTime": "შესვლის დრო",
-    "Check-outTime": "გასვლის დრო",
-    "HotelAddress": "სასტუმროს მისამართი",
-    "saveChanges": "ცვლილებების შენახვა",
-    "restaurantMenu": "რესტორნის მენიუ",
-    "restaurantMenuSub": "მართეთ მენიუს ერთეულები და ხელმისაწვდომობა",
-    "addItem": "ერთეულის დამატება",
-    "itemName": "ერთეულის სახელი",
-    "category": "კატეგორია",
-    "price": "ფასი",
-    "status": "სტატუსი",
-    "actions": "მოქმედებები",
-    "starters": "სტარტერები",
-    "mainCourse": "მთავარი კერძი",
-    "desserts": "დესერტები",
-    "drinks": "სასმელები"
+    "breadcrumb": {
+      "notSpecified": "არ არის მითითებული",
+      "settings": "პარამეტრები"
+    },
+
+    "header": {
+      "title": "პროფილი და პარამეტრები",
+      "subtitle": "მართეთ თქვენი პირადი ინფორმაცია"
+    },
+
+    "personalInfo": {
+      "title": "პირადი ინფორმაცია",
+      "description": "განაახლეთ თქვენი საკონტაქტო მონაცემები",
+
+      "fields": {
+        "firstName": {
+          "label": "სახელი"
+        },
+        "lastName": {
+          "label": "გვარი"
+        },
+        "phone": {
+          "label": "ტელეფონის ნომერი"
+        }
+      },
+
+      "actions": {
+        "save": "შენახვა"
+      }
+    },
+
+    "position": {
+      "title": "პოზიცია",
+      "description": "თქვენი პოზიცია ორგანიზაციაში",
+
+      "fields": {
+        "hotel": "სასტუმრო",
+        "department": "დეპარტამენტი",
+        "role": "როლი"
+      }
+    },
+
+    "shifts": {
+      "title": "მინიჭებული ცვლები",
+      "description": "თქვენი სამუშაო განრიგი",
+
+      "emptyState": {
+        "title": "ჯერ არ გაქვთ მინიჭებული ცვლები"
+      }
+    },
+
+    "password": {
+      "title": "პაროლის შეცვლა",
+      "description": "უსაფრთხოებისთვის რეგულარულად შეცვალეთ პაროლი",
+
+      "fields": {
+        "newPassword": {
+          "label": "ახალი პაროლი",
+          "placeholder": "მინიმუმ 6 სიმბოლო"
+        },
+        "confirmPassword": {
+          "label": "გაიმეორეთ ახალი პაროლი",
+          "placeholder": "••••••••"
+        }
+      },
+
+      "actions": {
+        "changePassword": "პაროლის შეცვლა"
+      }
+    }
   },
   "common": {
+    "search": "ძებნა...",
+    "department": "დეპარტამენტი",
     "loading": "იტვირთება...",
-    "error": "შეცდომა",
-    "success": "წრმატებული",
-    "cancel": "გაუქმება",
-    "save": "შენახვა",
-    "delete": "წაშლა",
-    "edit": "რედაქტირება",
-    "search": "ძებნა",
-    "noResults": "ფলებები ვერ მოიძებნა",
-    "viewAll": "ყველას ნახვა",
-    "all": "ყველა",
-    "fullList": "სრული სია",
-    "room": "ოთახი",
-    "ago": "წინ",
-    "showing": "ნაჩვენებია",
-    "of": "დან",
-    "available": "ხელმისაწვდომია",
-    "unavailable": "მიუწვდომელია"
+    "notSpecified": "არ არის მითითებული"
   },
   "auth": {
     "login": "ავტორიზაცია",

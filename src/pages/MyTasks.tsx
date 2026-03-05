@@ -10,6 +10,7 @@ import { api } from "../lib/api";
 import { useAuth } from "../context/AuthContext";
 import { timeAgo, slaRemaining, formatStatus } from "../lib/utils";
 import type { TableRequestRowItem } from "../constants/tableRequest";
+import { useTranslation } from "react-i18next";
 
 type Summary = {
   assigned: number;
@@ -49,13 +50,14 @@ const MyTasks = () => {
   const [page, setPage] = useState(1);
   const [statusFilter, setStatusFilter] = useState("All");
   const [priorityFilter, setPriorityFilter] = useState("All");
+  const { t } = useTranslation();
 
   const fetchData = useCallback(async () => {
     try {
       const [sum, tasksRes] = await Promise.all([
         api.get<Summary>("/my-tasks/summary"),
         api.get<TasksResponse>(
-          `/my-tasks?page=${page}&pageSize=10&status=${statusFilter}&priority=${priorityFilter}`
+          `/my-tasks?page=${page}&pageSize=10&status=${statusFilter}&priority=${priorityFilter}`,
         ),
       ]);
       setSummary(sum);
@@ -79,16 +81,13 @@ const MyTasks = () => {
             canComplete: r.status !== "COMPLETED",
             hasMenu: true,
           },
-        }))
+        })),
       );
     } catch {
       void 0;
     }
   }, [page, statusFilter, priorityFilter]);
 
-
-
-  
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchData();
@@ -112,10 +111,12 @@ const MyTasks = () => {
   return (
     <div className="max-w-7xl mx-auto flex flex-col gap-8">
       <MainTitle
-        department={user?.department?.name || "Housekeeping Department"}
-        page={"My Tasks"}
-        title={"My Tasks"}
-        description={"All tasks assigned to me"}
+        department={
+          user?.department?.name || "My Tasks" + " " + t("common.department")
+        }
+        page={t("myTasks.myTasks")}
+        title={t("myTasks.title")}
+        description={t("myTasks.description")}
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {summaryCards.map((r) => (

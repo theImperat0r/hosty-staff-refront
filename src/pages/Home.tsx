@@ -11,6 +11,7 @@ import { useAuth } from "../context/AuthContext";
 import { timeAgo, slaRemaining, formatStatus } from "../lib/utils";
 import type { TableRequestRowItem } from "../constants/tableRequest";
 import { DASHBOARD_REQUESTS } from "../constants/requests";
+import { useTranslation } from "react-i18next";
 
 type Summary = {
   newRequests: number;
@@ -50,13 +51,14 @@ const Home = () => {
   const [page, setPage] = useState(1);
   const [statusFilter, setStatusFilter] = useState("All");
   const [priorityFilter, setPriorityFilter] = useState("All");
+  const { t } = useTranslation();
 
   const fetchData = useCallback(async () => {
     try {
       const [sum, reqRes] = await Promise.all([
         api.get<Summary>("/dashboard/summary"),
         api.get<RequestsResponse>(
-          `/dashboard/requests?page=${page}&pageSize=10&status=${statusFilter}&priority=${priorityFilter}`
+          `/dashboard/requests?page=${page}&pageSize=10&status=${statusFilter}&priority=${priorityFilter}`,
         ),
       ]);
       setSummary(sum);
@@ -80,16 +82,12 @@ const Home = () => {
             canComplete: r.status !== "COMPLETED",
             hasMenu: true,
           },
-        }))
+        })),
       );
     } catch {
       void 0;
     }
   }, [page, statusFilter, priorityFilter]);
-
-
-
-  
 
   useEffect(() => {
     if (user?.isOnShift) {
@@ -116,10 +114,12 @@ const Home = () => {
   return (
     <div className="max-w-7xl mx-auto flex flex-col gap-8">
       <MainTitle
-        department={user?.department?.name || "Housekeeping Department"}
-        page={"Requests"}
-        title={"My Department"}
-        description={"Only housekeeping department requests"}
+        department={
+          user?.department?.name || "Housekeeping " + t("common.department")
+        }
+        page={t("dashboard.requests")}
+        title={t("dashboard.title")}
+        description={t("dashboard.description")}
       />
       <div className="relative">
         {!user?.isOnShift && <MainDashboardBlur onRefresh={fetchData} />}
