@@ -21,8 +21,12 @@ const Login = () => {
 
     setLoading(true);
     try {
-      await login(email, password);
-      navigate("/staff", { replace: true });
+      const loggedInUser = await login(email, password);
+      if (loggedInUser?.position === "MANAGER") {
+        window.location.href = "/manager";
+      } else {
+        navigate("/staff", { replace: true });
+      }
     } catch (err: unknown) {
       toast.error((err instanceof Error ? err.message : String(err)) || "შესვლა ვერ მოხერხდა");
     } finally {

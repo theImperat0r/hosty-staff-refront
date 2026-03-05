@@ -7,7 +7,7 @@ const AsideFooter = () => {
 
   const handleLogout = () => {
     logout();
-    navigate("/staff/login", { replace: true });
+    navigate("/auth", { replace: true });
   };
 
   return (

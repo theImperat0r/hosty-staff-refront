@@ -24,7 +24,7 @@ type User = {
   lastName: string;
   email: string;
   phone: string | null;
-  position: "SUPERVISOR" | "STAFF";
+  position: "MANAGER" | "STAFF";
   isOnShift: boolean;
   currentShiftStartedAt: string | null;
   departmentId: string | null;
@@ -39,7 +39,7 @@ type User = {
 type AuthContextType = {
   user: User | null;
   loading: boolean;
-  login: (email: string, password: string) => Promise<void>;
+  login: (email: string, password: string) => Promise<User>;
   register: (data: {
     name: string;
     lastName: string;
@@ -86,6 +86,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
     localStorage.setItem("token", res.token);
     setUser(res.user);
+    return res.user;
   };
 
   const register = async (data: {

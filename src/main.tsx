@@ -20,7 +20,7 @@ import ProtectedRoute from "./components/ProtectedRoute.tsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/staff/login" element={<Login />} />
+      <Route path="/auth" element={<Login />} />
       <Route path="/staff/registration" element={<Registration />} />
       <Route
         path="/staff"
