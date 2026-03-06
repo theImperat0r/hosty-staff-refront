@@ -4,6 +4,8 @@ import MainTitle from "../components/main/MainTitle";
 import { api } from "../lib/api";
 import { useAuth } from "../context/AuthContext";
 import { DAY_NAMES } from "../lib/utils";
+import { useTranslation } from "react-i18next";
+import CircleUserIcon from "../assets/CircleUserIcon";
 
 type TeamMember = {
   id: string;
@@ -22,6 +24,7 @@ type TeamMember = {
 const Team = () => {
   const { user } = useAuth();
   const [members, setMembers] = useState<TeamMember[]>([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     api
@@ -33,33 +36,18 @@ const Team = () => {
   return (
     <div className="max-w-7xl mx-auto flex flex-col gap-8">
       <MainTitle
-        department={user?.department?.name || "Housekeeping Department"}
-        page={"გუნდი"}
-        title={"ჩემი გუნდი"}
-        description={"თქვენი დეპარტამენტის თანამშრომლები"}
+        department={
+          user?.department?.name || "Team" + " " + t("common.department")
+        }
+        page={t("team.team")}
+        title={t("team.title")}
+        description={t("team.description")}
       />
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
         {members.map((tm) => (
           <MainTeamMembersCard
             key={tm.id}
-            avatar={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-circle-user h-9 w-9 text-blue-600"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <circle cx="12" cy="10" r="3"></circle>
-                <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"></path>
-              </svg>
-            }
+            avatar={<CircleUserIcon />}
             name={tm.name}
             lastName={tm.lastName}
             isOnShift={tm.isOnShift}

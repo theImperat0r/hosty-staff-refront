@@ -1,0 +1,112 @@
+{
+  "navigation": {
+    "dashboard": "მთავარი",
+    "myTasks": "ჩემი დავალებები",
+    "team": "გუნდი",
+    "settings": "პარამეტრები",
+    "signOut": "გასვლა"
+  },
+  "dashboard": {
+    "requests": "მოთხოვნები",
+    "title": "ჩემი დეპარტამენტი",
+    "description": "მხოლოდ დეპარტამენტის მოთხოვნები"
+  },
+  "myTasks": {
+    "myTasks": "ჩემი დავალებები",
+    "title": "ჩემი დავალებები",
+    "description": "ჩემთვის მინიჭებული ყველა დავალება"
+  },
+  "team": {
+    "team": "გუნდი",
+    "title": "ჩემი გუნდი",
+    "description": "თქვენი დეპარტამენტის თანამშრომლები"
+  },
+  "settings": {
+    "breadcrumb": {
+      "notSpecified": "არ არის მითითებული",
+      "settings": "პარამეტრები"
+    },
+
+    "header": {
+      "title": "პროფილი და პარამეტრები",
+      "subtitle": "მართეთ თქვენი პირადი ინფორმაცია"
+    },
+
+    "personalInfo": {
+      "title": "პირადი ინფორმაცია",
+      "description": "განაახლეთ თქვენი საკონტაქტო მონაცემები",
+
+      "fields": {
+        "firstName": {
+          "label": "სახელი"
+        },
+        "lastName": {
+          "label": "გვარი"
+        },
+        "phone": {
+          "label": "ტელეფონის ნომერი"
+        }
+      },
+
+      "actions": {
+        "save": "შენახვა"
+      }
+    },
+
+    "position": {
+      "title": "პოზიცია",
+      "description": "თქვენი პოზიცია ორგანიზაციაში",
+
+      "fields": {
+        "hotel": "სასტუმრო",
+        "department": "დეპარტამენტი",
+        "role": "როლი"
+      }
+    },
+
+    "shifts": {
+      "title": "მინიჭებული ცვლები",
+      "description": "თქვენი სამუშაო განრიგი",
+
+      "emptyState": {
+        "title": "ჯერ არ გაქვთ მინიჭებული ცვლები"
+      }
+    },
+
+    "password": {
+      "title": "პაროლის შეცვლა",
+      "description": "უსაფრთხოებისთვის რეგულარულად შეცვალეთ პაროლი",
+
+      "fields": {
+        "newPassword": {
+          "label": "ახალი პაროლი",
+          "placeholder": "მინიმუმ 6 სიმბოლო"
+        },
+        "confirmPassword": {
+          "label": "გაიმეორეთ ახალი პაროლი",
+          "placeholder": "••••••••"
+        }
+      },
+
+      "actions": {
+        "changePassword": "პაროლის შეცვლა"
+      }
+    }
+  },
+  "common": {
+    "search": "ძებნა...",
+    "department": "დეპარტამენტი",
+    "loading": "იტვირთება...",
+    "notSpecified": "არ არის მითითებული"
+  },
+  "auth": {
+    "login": "ავტორიზაცია",
+    "register": "რეგისტრაცია",
+    "email": "ელ-ფოსტა",
+    "password": "პაროლი",
+    "rememberMe": "დამიმახსოვრე",
+    "forgotPassword": "პაროლი დაგავიწყდა?",
+    "signUp": "რეგისტრაცია",
+    "signIn": "ავტორიზაცია"
+  }
+}

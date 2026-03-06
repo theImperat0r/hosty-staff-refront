@@ -1,0 +1,112 @@
+{
+  "navigation": {
+    "dashboard": "Dashboard",
+    "myTasks": "My Tasks",
+    "team": "Team",
+    "settings": "Settings",
+    "signOut": "Sign Out"
+  },
+  "dashboard": {
+    "requests": "Requests",
+    "title": "My Department",
+    "description": "Only department requests"
+  },
+  "myTasks": {
+    "myTasks": "My Tasks",
+    "title": "My Tasks",
+    "description": "All tasks assigned to me"
+  },
+  "team": {
+    "team": "Team",
+    "title": "My Team",
+    "description": "Your department colleagues"
+  },
+  "settings": {
+    "breadcrumb": {
+      "notSpecified": "Not Specified",
+      "settings": "Settings"
+    },
+
+    "header": {
+      "title": "Profile & Settings",
+      "subtitle": "Manage your personal information"
+    },
+
+    "personalInfo": {
+      "title": "Personal Information",
+      "description": "Update your contact details",
+
+      "fields": {
+        "firstName": {
+          "label": "First Name"
+        },
+        "lastName": {
+          "label": "Last Name"
+        },
+        "phone": {
+          "label": "Phone Number"
+        }
+      },
+
+      "actions": {
+        "save": "Save"
+      }
+    },
+
+    "position": {
+      "title": "Position",
+      "description": "Your position in the organization",
+
+      "fields": {
+        "hotel": "Hotel",
+        "department": "Department",
+        "role": "Role"
+      }
+    },
+
+    "shifts": {
+      "title": "Assigned Shifts",
+      "description": "Your work schedule",
+
+      "emptyState": {
+        "title": "No shifts assigned yet"
+      }
+    },
+
+    "password": {
+      "title": "Change Password",
+      "description": "Change your password regularly for security",
+
+      "fields": {
+        "newPassword": {
+          "label": "New Password",
+          "placeholder": "Minimum 6 characters"
+        },
+        "confirmPassword": {
+          "label": "Confirm New Password",
+          "placeholder": "••••••••"
+        }
+      },
+
+      "actions": {
+        "changePassword": "Change Password"
+      }
+    }
+  },
+  "common": {
+    "search": "Search...",
+    "department": "Department",
+    "loading": "Loading...",
+    "notSpecified": "Not Specified"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "signUp": "Sign up",
+    "signIn": "Sign in"
+  }
+}

@@ -1,5 +1,7 @@
 import MainSettingTitle from "./MainSettingTitle";
 import { useAuth } from "../../context/AuthContext";
+import { useTranslation } from "react-i18next";
+import BuildingIcon from "../../assets/BuildingIcon";
 
 const POSITION_LABELS: Record<string, string> = {
   SUPERVISOR: "სუპერვაიზერი",
@@ -8,6 +10,7 @@ const POSITION_LABELS: Record<string, string> = {
 
 const MainSettingsPosition = () => {
   const { user } = useAuth();
+  const { t } = useTranslation();
 
   const positionsInfo = [
     {
@@ -34,7 +37,7 @@ const MainSettingsPosition = () => {
           <path d="M10 18h4"></path>
         </svg>
       ),
-      title: "სასტუმრო",
+      title: "hotel",
       description: user?.hotel?.name || "არ არის მითითებული",
     },
     {
@@ -56,7 +59,7 @@ const MainSettingsPosition = () => {
           <rect width="20" height="14" x="2" y="6" rx="2"></rect>
         </svg>
       ),
-      title: "დეპარტამენტი",
+      title: "department",
       description: user?.department?.name || "არ არის მითითებული",
     },
     {
@@ -78,38 +81,18 @@ const MainSettingsPosition = () => {
           <circle cx="12" cy="7" r="4"></circle>
         </svg>
       ),
-      title: "როლი",
-      description: POSITION_LABELS[user?.position || ""] || "არ არის მითითებული",
+      title: "role",
+      description:
+        POSITION_LABELS[user?.position || ""] || "არ არის მითითებული",
     },
   ];
 
   return (
     <div className="rounded-lg border border-[#dcdfe5] bg-white text-[#0f1729] shadow-sm">
       <MainSettingTitle
-        icon={
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-building2 h-5 w-5"
-          >
-            <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
-            <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
-            <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
-            <path d="M10 6h4"></path>
-            <path d="M10 10h4"></path>
-            <path d="M10 14h4"></path>
-            <path d="M10 18h4"></path>
-          </svg>
-        }
-        title={"პოზიცია"}
-        description={"თქვენი პოზიცია ორგანიზაციაში"}
+        icon={<BuildingIcon />}
+        title={t("settings.position.title")}
+        description={t("settings.position.description")}
       />
       <div className="p-6 pt-0">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -120,8 +103,10 @@ const MainSettingsPosition = () => {
             >
               {pi.icon}
               <div>
-                <p className="text-sm text-[#676f7e]">{pi.title}</p>
-                <p className="font-medium">{pi.description}</p>
+                <p className="text-sm text-[#676f7e]">
+                  {t(`settings.position.fields.${pi.title}`)}
+                </p>
+                <p className="font-medium">{t("common.notSpecified")}</p>
               </div>
             </div>
           ))}
