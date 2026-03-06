@@ -1,3 +1,6 @@
+import ChevronLeft from "../../assets/ChevronLeft";
+import ChevronRight from "../../assets/ChevronRight";
+
 const MainTableFooter = ({
   start = 1,
   end = 0,
@@ -26,40 +29,14 @@ const MainTableFooter = ({
           disabled={page <= 1}
           className="size-8 rounded flex items-center justify-center border border-gray-200 text-gray-400 hover:bg-gray-50 transition-colors disabled:opacity-50"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-chevron-left h-4 w-4"
-          >
-            <path d="m15 18-6-6 6-6"></path>
-          </svg>
+          <ChevronLeft />
         </button>
         <button
           onClick={() => onPageChange?.(page + 1)}
           disabled={page >= totalPages}
           className="size-8 rounded flex items-center justify-center border border-gray-200 text-gray-500 hover:bg-gray-50 transition-colors disabled:opacity-50"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-chevron-right h-4 w-4"
-          >
-            <path d="m9 18 6-6-6-6"></path>
-          </svg>
+          <ChevronRight />
         </button>
       </div>
     </div>

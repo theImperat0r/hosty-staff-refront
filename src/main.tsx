@@ -25,11 +25,12 @@ const router = createBrowserRouter(
       <Route path="/staff/registration" element={<Registration />} />
       <Route
         path="/staff"
-        element={
-          <ProtectedRoute>
-            <App />
-          </ProtectedRoute>
-        }
+        // element={
+        //   <ProtectedRoute>
+        //     <App />
+        //   </ProtectedRoute>
+        // }
+        element={<App />}
       >
         <Route index element={<Home />} />
         <Route path="/staff/my-tasks" element={<MyTasks />} />

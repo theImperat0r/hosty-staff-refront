@@ -1,4 +1,6 @@
 import type { JSX } from "react";
+import CalendarLucideIcon from "../../assets/CalendarLucideIcon";
+import ClockLucideIcon from "../../assets/ClockLucideIcon";
 
 type TeamMembersProps = {
   avatar: JSX.Element;
@@ -46,23 +48,7 @@ const MainTeamMembersCard = ({
       </div>
       <div className="border-t border-gray-100 pt-4">
         <div className="flex items-center gap-2 mb-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-calendar h-4 w-4 text-gray-400"
-          >
-            <path d="M8 2v4"></path>
-            <path d="M16 2v4"></path>
-            <rect width="18" height="18" x="3" y="4" rx="2"></rect>
-            <path d="M3 10h18"></path>
-          </svg>
+          <CalendarLucideIcon />
           <span className="text-sm font-medium text-gray-700">
             მინიჭებული ცვლები
           </span>
@@ -77,21 +63,7 @@ const MainTeamMembersCard = ({
                 {shift.day}
               </span>
               <div className="flex items-center gap-1 text-sm text-gray-500">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-clock h-3.5 w-3.5"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
+                <ClockLucideIcon />
                 <span>{shift.shiftStarts + "-" + shift.shiftEnds}</span>
               </div>
             </div>

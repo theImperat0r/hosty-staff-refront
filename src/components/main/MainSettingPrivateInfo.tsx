@@ -29,8 +29,12 @@ const MainSettingPrivateInfo = () => {
       });
       setUser((prev) => (prev ? { ...prev, ...updated } : prev));
       toast.success("პროფილი განახლდა!");
-    } catch (err: any) {
-      toast.error(err.message || "შეცდომა");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        toast.error(err.message);
+      } else {
+        toast.error("შეცდომა");
+      }
     } finally {
       setLoading(false);
     }

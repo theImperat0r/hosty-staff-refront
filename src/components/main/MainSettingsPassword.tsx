@@ -34,8 +34,12 @@ const MainSettingsPassword = () => {
       await api.put("/user/password", { currentPassword, newPassword });
       toast.success("პაროლი წარმატებით შეიცვალა!");
       e.currentTarget.reset();
-    } catch (err: any) {
-      toast.error(err.message || "შეცდომა");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        toast.error(err.message);
+      } else {
+        toast.error("შეცდომა");
+      }
     } finally {
       setLoading(false);
     }

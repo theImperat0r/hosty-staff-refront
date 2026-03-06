@@ -31,6 +31,7 @@ const MainNav = () => {
 
   useEffect(() => {
     if (!searchQuery.trim()) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setSearchResults(null);
       setShowSearch(false);
       return;

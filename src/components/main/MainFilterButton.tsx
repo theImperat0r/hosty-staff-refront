@@ -36,7 +36,7 @@ const MainFilterButton = ({
         {icon}
       </button>
       {open && options && (
-        <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 min-w-[140px] py-1">
+        <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 min-w-35 py-1">
           {options.map((opt) => (
             <button
               key={opt}
